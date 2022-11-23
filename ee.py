@@ -10,7 +10,7 @@ pd.__version__
 
 # %%
 ## Dataset variabele
-dataset = "\\huurwoningentotaalvoorpowerbi.xlsx"
+dataset = 'https://github.com/Roald1519166/Scraper/blob/master/huurwoningentotaalvoorpowerbi.xlsx'
 ## Ophalen van de datasets
 oud = pd.read_excel(dataset)
 oud.drop(oud[oud['Status'] == 'Inactive'].index, inplace=True)
@@ -256,7 +256,7 @@ oud = oud.fillna("")
 
 # %%
 name = "huurwoningentotaal"
-inner2.to_excel("\\" + name + current_time + ".xlsx", index=False)
-inner2.to_excel("\\" + name + 'voorpowerbi' + ".xlsx", index=False)
+inner2.to_excel('https://github.com/Roald1519166/Scraper/' + name + current_time + ".xlsx", index=False)
+inner2.to_excel('https://github.com/Roald1519166/Scraper/' + name + 'voorpowerbi' + ".xlsx", index=False)
 
 
