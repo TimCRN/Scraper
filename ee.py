@@ -10,7 +10,7 @@ pd.__version__
 
 # %%
 ## Dataset variabele
-dataset = './data/huurwoningentotaalvoorpowerbi.xlsx'
+dataset = './Data/huurwoningentotaalvoorpowerbi.xlsx'
 ## Ophalen van de datasets
 oud = pd.read_excel(dataset)
 oud.drop(oud[oud['Status'] == 'Inactive'].index, inplace=True)
@@ -255,7 +255,7 @@ inner2['Bouwjaar'] = bouwjaary
 oud = oud.fillna("")
 
 # %%
-name = './data/huurwoningentotaal'
+name = './Data/huurwoningentotaal'
 inner2.to_excel(name + current_time + ".xlsx", index=False)
 inner2.to_excel(name + 'voorpowerbi' + ".xlsx", index=False)
 
