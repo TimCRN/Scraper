@@ -4,8 +4,6 @@ import requests
 import pandas as pd
 from selenium import webdriver
 from tqdm import tqdm , trange
-import time
-import datetime
 pd.__version__
 
 # %%
