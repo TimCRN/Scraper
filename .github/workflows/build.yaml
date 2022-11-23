@@ -28,10 +28,10 @@ jobs:
         run: |
           git config --local user.email "1519166janssen@zuyd.nl"
           git config --local user.name "Roald1519166"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+          git add .
+          git commit -a -m "Uploaden van datasets"
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
           branch: main
