@@ -29,7 +29,7 @@ jobs:
           git config --local user.email "1519166janssen@zuyd.nl"
           git config --local user.name "Roald1519166"
           git add -A
-          git diff-index --quiet HEAD || (git comit -a -m "updated logs" --allow-empty)
+          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
 
 # on:
 #   schedule:
