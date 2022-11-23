@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup as bs
 import requests
 import pandas as pd
 from selenium import webdriver
-import os
 from tqdm import tqdm , trange
 import time
 import datetime
@@ -13,8 +12,7 @@ pd.__version__
 ## Dataset variabele
 dataset = "\\huurwoningentotaalvoorpowerbi.xlsx"
 ## Ophalen van de datasets
-pwd = os.getcwd()
-oud = pd.read_excel(pwd + dataset)
+oud = pd.read_excel(dataset)
 oud.drop(oud[oud['Status'] == 'Inactive'].index, inplace=True)
 oud = oud.fillna("")
 oud["Status"] = "TBD"
@@ -257,9 +255,8 @@ inner2['Bouwjaar'] = bouwjaary
 oud = oud.fillna("")
 
 # %%
-pwd = os.getcwd()
 name = "huurwoningentotaal"
-inner2.to_excel(pwd + "\\" + name + current_time + ".xlsx", index=False)
-inner2.to_excel(pwd + "\\" + name + 'voorpowerbi' + ".xlsx", index=False)
+inner2.to_excel("\\" + name + current_time + ".xlsx", index=False)
+inner2.to_excel("\\" + name + 'voorpowerbi' + ".xlsx", index=False)
 
 
