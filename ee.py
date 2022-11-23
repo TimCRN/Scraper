@@ -255,8 +255,8 @@ inner2['Bouwjaar'] = bouwjaary
 oud = oud.fillna("")
 
 # %%
-name = "huurwoningentotaal"
-inner2.to_excel('https://github.com/Roald1519166/Scraper/' + name + current_time + ".xlsx", index=False)
-inner2.to_excel('https://github.com/Roald1519166/Scraper/' + name + 'voorpowerbi' + ".xlsx", index=False)
+name = 'huurwoningentotaal'
+inner2.to_excel(name + current_time + ".xlsx", index=False)
+inner2.to_excel(name + 'voorpowerbi' + ".xlsx", index=False)
 
 
