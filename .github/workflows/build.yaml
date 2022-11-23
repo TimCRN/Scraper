@@ -28,10 +28,12 @@ jobs:
         run: |
           git config --local user.email "1519166janssen@zuyd.nl"
           git config --local user.name "Roald1519166"
+          git fetch
+          git pull
           git add .
           git commit -a -m "Uploaden van datasets"
       - name: push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.TOKEN }}
           branch: main
