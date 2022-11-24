@@ -32,7 +32,7 @@ jobs:
           git pull
           git add .
           git commit -a -m "Uploaden van datasets"
-      - name: push changes
+      - name: push changez
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.TOKEN }}
