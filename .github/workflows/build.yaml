@@ -24,7 +24,7 @@ jobs:
       - name: schedulebuild
         run: |
           python ee.py
-      - name: commit stoof
+      - name: commit stooph
         run: |
           git config --global user.email "1519166janssen@zuyd.nl"
           git config --global user.name "Roald1519166"
