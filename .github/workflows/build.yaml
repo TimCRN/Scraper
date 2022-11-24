@@ -1,6 +1,9 @@
 name: Python package
 
-on: push
+on:
+  schedule:
+    - cron: "8 0 * * *" #runs at 08:00 UTC everyday
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,7 +27,7 @@ jobs:
       - name: schedulebuild
         run: |
           python ee.py
-      - name: commit stooph
+      - name: commit datasets
         run: |
           git config --global user.email "1519166janssen@zuyd.nl"
           git config --global user.name "Roald1519166"
