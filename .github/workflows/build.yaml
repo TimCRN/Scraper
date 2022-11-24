@@ -1,7 +1,6 @@
 name: Python package
 
 on:
-  push:
   schedule:
     - cron: "8 0 * * *" #runs at 08:00 UTC everyday
 
